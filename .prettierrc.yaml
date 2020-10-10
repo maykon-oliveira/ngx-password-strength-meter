@@ -1,0 +1,15 @@
+printWidth: 100
+singleQuote: true
+tabWidth: 2
+semi: true
+bracketSpacing: true
+arrowParens: 'always'
+overrides:
+  - files: '*.html'
+    options:
+      printWidth: 120
+      jsxBracketSameLine: true
+  - files:
+      - '*.scss'
+    options:
+      singleQuote: false

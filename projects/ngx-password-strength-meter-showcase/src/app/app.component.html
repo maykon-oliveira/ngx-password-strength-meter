@@ -1,0 +1,23 @@
+<div>
+  <input type="text" [(ngModel)]="password" />
+  <ngx-password-strength-meter [password]="password"></ngx-password-strength-meter>
+</div>
+<div>
+  <p>password no provided</p>
+  <ngx-password-strength-meter></ngx-password-strength-meter>
+
+  <p>password less than min length attribute</p>
+  <ngx-password-strength-meter [password]="'123678'" enableFeedback="true"></ngx-password-strength-meter>
+
+  <p>strength <= 1</p>
+  <ngx-password-strength-meter [password]="'12345aa4S'"></ngx-password-strength-meter>
+
+  <p>strength <= 2</p>
+  <ngx-password-strength-meter [password]="'@#fgasasasas'"></ngx-password-strength-meter>
+
+  <p>strength <= 3</p>
+  <ngx-password-strength-meter [password]="'$%EHGsdFZs'"></ngx-password-strength-meter>
+
+  <p>strength <= 4</p>
+  <ngx-password-strength-meter [password]="'$%EHGsdFZse56TEQTQER'"></ngx-password-strength-meter>
+</div>

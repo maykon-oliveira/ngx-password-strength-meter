@@ -1,0 +1,26 @@
+{
+  "name": "ngx-password-strength-meter",
+  "version": "1.0.0",
+  "description": "Display the strength of the password with a visual feedback.",
+  "private": false,
+  "bugs": "https://github.com/maykon-oliveira/ngx-password-strength-meter/issues",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maykon-oliveira/ngx-password-strength-meter"
+  },
+  "peerDependencies": {
+    "@angular/common": "^9.0.7",
+    "@angular/core": "^9.0.7",
+    "@types/zxcvbn": "^4.4.0",
+    "tslib": "^1.10.0"
+  },
+  "dependencies": {
+    "zxcvbn3": "^0.1.1"
+  },
+  "keywords": [
+    "password-strength",
+    "ngx-password-strength-meter",
+    "zxcvbn", "zxcvbn3"
+  ]
+}

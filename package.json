@@ -1,0 +1,78 @@
+{
+  "name": "ngx-password-strength-meter",
+  "version": "1.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "build:lib:prod": "npm run build -- --prod",
+    "build:lib:watch": "ng build -- --watch",
+    "build:showcase": "ng build ngx-password-strength-meter-showcase",
+    "build:showcase:prod": "npm run build:showcase -- --prod --output-path docs --base-href ngx-password-strength-meter",
+    "test": "ng test",
+    "coverage:lib": "ng test ngx-password-strength-meter --code-coverage --watch=false",
+    "coverage:lib:report": "cat ./coverage/ngx-password-strength-meter/lcov.info | codecov",
+    "lint": "ng lint",
+    "format:check": "prettier --list-different 'projects/**'",
+    "format:write": "prettier --write 'projects/**'",
+    "publish": "cd dist/ngx-password-strength-meter && npm publish",
+    "release": "standard-version",
+    "e2e": "ng e2e"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~9.0.7",
+    "@angular/common": "~9.0.7",
+    "@angular/compiler": "~9.0.7",
+    "@angular/core": "~9.0.7",
+    "@angular/forms": "~9.0.7",
+    "@angular/platform-browser": "~9.0.7",
+    "@angular/platform-browser-dynamic": "~9.0.7",
+    "@angular/router": "~9.0.7",
+    "rxjs": "~6.5.4",
+    "tslib": "^1.10.0",
+    "zone.js": "~0.10.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.900.7",
+    "@angular-devkit/build-ng-packagr": "~0.900.7",
+    "@angular/cli": "~9.0.7",
+    "@angular/compiler-cli": "~9.0.7",
+    "@angular/language-service": "~9.0.7",
+    "@types/jasmine": "~3.5.0",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
+    "@types/zxcvbn": "^4.4.0",
+    "codecov": "^3.8.0",
+    "codelyzer": "^5.1.2",
+    "husky": "^4.3.0",
+    "jasmine-core": "~3.5.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~4.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~2.1.0",
+    "karma-jasmine": "~2.0.1",
+    "karma-jasmine-html-reporter": "^1.4.2",
+    "lint-staged": "^10.4.0",
+    "ng-packagr": "^9.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2",
+    "protractor": "~5.4.3",
+    "standard-version": "^9.0.0",
+    "ts-node": "~8.3.0",
+    "tslint": "~5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "~3.7.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "projects/**/*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

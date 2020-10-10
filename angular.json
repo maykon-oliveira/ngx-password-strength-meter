@@ -1,0 +1,168 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1, 
+  "newProjectRoot": "projects",
+  "projects": {
+    "ngx-password-strength-meter": {
+      "projectType": "library",
+      "root": "projects/ngx-password-strength-meter",
+      "sourceRoot": "projects/ngx-password-strength-meter/src",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-password-strength-meter/tsconfig.lib.json",
+            "project": "projects/ngx-password-strength-meter/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-password-strength-meter/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-password-strength-meter/src/test.ts",
+            "tsConfig": "projects/ngx-password-strength-meter/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-password-strength-meter/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-password-strength-meter/tsconfig.lib.json",
+              "projects/ngx-password-strength-meter/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ngx-password-strength-meter-showcase": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/ngx-password-strength-meter-showcase",
+      "sourceRoot": "projects/ngx-password-strength-meter-showcase/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ngx-password-strength-meter-showcase",
+            "index": "projects/ngx-password-strength-meter-showcase/src/index.html",
+            "main": "projects/ngx-password-strength-meter-showcase/src/main.ts",
+            "polyfills": "projects/ngx-password-strength-meter-showcase/src/polyfills.ts",
+            "tsConfig": "projects/ngx-password-strength-meter-showcase/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/ngx-password-strength-meter-showcase/src/favicon.ico",
+              "projects/ngx-password-strength-meter-showcase/src/assets"
+            ],
+            "styles": [
+              "projects/ngx-password-strength-meter-showcase/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ngx-password-strength-meter-showcase/src/environments/environment.ts",
+                  "with": "projects/ngx-password-strength-meter-showcase/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ngx-password-strength-meter-showcase:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ngx-password-strength-meter-showcase:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ngx-password-strength-meter-showcase:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-password-strength-meter-showcase/src/test.ts",
+            "polyfills": "projects/ngx-password-strength-meter-showcase/src/polyfills.ts",
+            "tsConfig": "projects/ngx-password-strength-meter-showcase/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-password-strength-meter-showcase/karma.conf.js",
+            "assets": [
+              "projects/ngx-password-strength-meter-showcase/src/favicon.ico",
+              "projects/ngx-password-strength-meter-showcase/src/assets"
+            ],
+            "styles": [
+              "projects/ngx-password-strength-meter-showcase/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-password-strength-meter-showcase/tsconfig.app.json",
+              "projects/ngx-password-strength-meter-showcase/tsconfig.spec.json",
+              "projects/ngx-password-strength-meter-showcase/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ngx-password-strength-meter-showcase/e2e/protractor.conf.js",
+            "devServerTarget": "ngx-password-strength-meter-showcase:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ngx-password-strength-meter-showcase:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "ngx-password-strength-meter"
+}
