@@ -47,13 +47,21 @@ export class AppModule {
 
 You can change the colors of meter by overriding the CSS variables bellow
 
-| variable                 |                                  default                                  |
-| :----------------------- | :-----------------------------------------------------------------------: |
-| --strength-meter-score-0 | ![#8b0000](https://via.placeholder.com/15/8b0000/000000?text=+) `#8b0000` |
-| --strength-meter-score-1 | ![#ff4500](https://via.placeholder.com/15/ff4500/000000?text=+) `#ff4500` |
-| --strength-meter-score-2 | ![#ffa500](https://via.placeholder.com/15/ffa500/000000?text=+) `#ffa500` |
-| --strength-meter-score-3 | ![#9acd32](https://via.placeholder.com/15/9acd32/000000?text=+) `#9acd32` |
-| --strength-meter-score-4 | ![#008000](https://via.placeholder.com/15/008000/000000?text=+) `#008000` |
+| variable                    |                                  default                                  |
+| :-------------------------- | :-----------------------------------------------------------------------: |
+| --strength-meter-background | ![#dddddd](https://via.placeholder.com/15/dddddd/000000?text=+) `#dddddd` |
+| --strength-meter-score-0    | ![#8b0000](https://via.placeholder.com/15/8b0000/000000?text=+) `#8b0000` |
+| --strength-meter-score-1    | ![#ff4500](https://via.placeholder.com/15/ff4500/000000?text=+) `#ff4500` |
+| --strength-meter-score-2    | ![#ffa500](https://via.placeholder.com/15/ffa500/000000?text=+) `#ffa500` |
+| --strength-meter-score-3    | ![#9acd32](https://via.placeholder.com/15/9acd32/000000?text=+) `#9acd32` |
+| --strength-meter-score-4    | ![#008000](https://via.placeholder.com/15/008000/000000?text=+) `#008000` |
+
+```css
+.strength-meter {
+  --strength-meter-score-0: #668811 !important;
+  --strength-meter-background: rgb(0, 38, 250) !important;
+}
+```
 
 ## API
 

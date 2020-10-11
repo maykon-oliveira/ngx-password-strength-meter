@@ -21,6 +21,7 @@
   "keywords": [
     "password-strength",
     "ngx-password-strength-meter",
-    "zxcvbn", "zxcvbn3"
+    "zxcvbn",
+    "zxcvbn3"
   ]
 }
