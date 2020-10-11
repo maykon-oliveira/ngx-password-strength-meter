@@ -12,10 +12,10 @@
   "peerDependencies": {
     "@angular/common": "^9.0.7",
     "@angular/core": "^9.0.7",
-    "@types/zxcvbn": "^4.4.0",
-    "tslib": "^1.10.0"
+    "@types/zxcvbn": "^4.4.0"
   },
   "dependencies": {
+    "tslib": "^2.0.0",
     "zxcvbn3": "^0.1.1"
   },
   "keywords": [
