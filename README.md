@@ -20,7 +20,7 @@ To display the strength of the password with a visual feedback.
 ```sh
 npm install ngx-password-strength-meter --save
 # or
-yarn add ngx-password-strength-meter --save
+yarn add ngx-password-strength-meter
 ```
 
 **Step 2:** Import the library
@@ -45,7 +45,7 @@ export class AppModule {
 
 ## Changing meter colors
 
-You can change the colors of meter by overriding the CSS variables bellow
+You can change the meter's color by overriding the CSS variables bellow
 
 | variable                    |                                  default                                  |
 | :-------------------------- | :-----------------------------------------------------------------------: |

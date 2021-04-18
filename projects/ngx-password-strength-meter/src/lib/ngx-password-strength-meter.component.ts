@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   Input,
@@ -8,7 +9,6 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { StrengthFeedback } from './model/strength-feedback';
-import { Score } from './model/strength-result';
 import { NgxPasswordStrengthMeterService } from './ngx-password-strength-meter.service';
 
 const getLengthRuleErrorMessage = {
@@ -26,7 +26,7 @@ const getLengthRuleErrorMessage = {
   selector: 'ngx-password-strength-meter',
   templateUrl: './ngx-password-strength-meter.component.html',
   styleUrls: ['./ngx-password-strength-meter.component.scss'],
-  styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NgxPasswordStrengthMeterComponent implements OnInit, OnChanges {
   @Input() password: string;
@@ -36,7 +36,7 @@ export class NgxPasswordStrengthMeterComponent implements OnInit, OnChanges {
   @Input() enableFeedback = false;
   @Input() colors: string[] = [];
   @Output() strengthChange = new EventEmitter<number>();
-  strength: Score = null;
+  strength: number = null;
   feedback: StrengthFeedback = null;
   private previousStrength = null;
 

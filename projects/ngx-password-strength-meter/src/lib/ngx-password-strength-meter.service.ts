@@ -1,7 +1,7 @@
 import { StrengthResult } from './model/strength-result';
 import { Injectable } from '@angular/core';
 
-import { zxcvbn } from 'zxcvbn3';
+import { zxcvbn } from '@zxcvbn-ts/core';
 
 @Injectable({
   providedIn: 'root',
@@ -14,13 +14,16 @@ export class NgxPasswordStrengthMeterService {
    *
    * @param password - Password
    *
-   * @returns An instance of ScoreResult
+   * @returns An instance of StrengthResult
    */
   calculate(password: string): StrengthResult {
     if (password === undefined || password === null)
       throw new Error('Password should be a valid string');
 
-    const { score, feedback } = zxcvbn(password);
-    return { score, feedback };
+    if (!password.length) {
+      return { score: 0, feedback: { suggestions: [], warning: '' } };
+    }
+
+    return zxcvbn(password);
   }
 }

@@ -29,10 +29,12 @@
     "@angular/platform-browser": "~11.2.10",
     "@angular/platform-browser-dynamic": "~11.2.10",
     "@angular/router": "~11.2.10",
+    "@zxcvbn-ts/core": "^0.3.0",
+    "@zxcvbn-ts/language-common": "^0.1.2",
+    "@zxcvbn-ts/language-en": "^0.3.0",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2",
-    "zxcvbn3": "^0.1.1"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.9",
@@ -42,7 +44,6 @@
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
-    "@types/zxcvbn": "^4.4.0",
     "codecov": "^3.8.0",
     "codelyzer": "^6.0.0",
     "husky": "^4.3.0",

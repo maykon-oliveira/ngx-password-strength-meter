@@ -10,18 +10,17 @@
     "url": "https://github.com/maykon-oliveira/ngx-password-strength-meter"
   },
   "peerDependencies": {
-    "@angular/common": "^9.0.7",
-    "@angular/core": "^9.0.7",
-    "@types/zxcvbn": "^4.4.0"
+    "@angular/common": "~11.2.10",
+    "@angular/core": "~11.2.10"
   },
   "dependencies": {
-    "tslib": "^2.0.0",
-    "zxcvbn3": "^0.1.1"
+    "@zxcvbn-ts/core": "^0.3.0",
+    "tslib": "^2.0.0"
   },
   "keywords": [
     "password-strength",
     "ngx-password-strength-meter",
     "zxcvbn",
-    "zxcvbn3"
+    "zxcvbn-ts"
   ]
 }

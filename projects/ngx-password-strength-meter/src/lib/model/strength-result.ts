@@ -1,7 +1,5 @@
 import { StrengthFeedback } from './strength-feedback';
 
-export type Score = 0 | 1 | 2 | 3 | 4;
-
 export interface StrengthResult {
   /**
    * Integer from 0-4
@@ -11,7 +9,7 @@ export interface StrengthResult {
    * 3 safely unguessable: moderate protection from offline slow-hash scenario
    * 4 very unguessable: strong protection from offline slow-hash scenario
    */
-  score: Score;
+  score: number;
   /**
    * verbal feedback to help choose better passwords. set when score <= 2.
    */
