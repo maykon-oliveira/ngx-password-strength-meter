@@ -1,13 +1,25 @@
 import { StrengthResult } from './model/strength-result';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, Optional } from '@angular/core';
+import {
+  NGX_PASSWORD_STRENGTH_METER_CONFIG,
+  NgxPasswordStrengthMeterConfig,
+} from './ngx-password-strength-meter.model';
 
-import { zxcvbn } from '@zxcvbn-ts/core';
+import { zxcvbn, ZxcvbnOptions } from '@zxcvbn-ts/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class NgxPasswordStrengthMeterService {
-  constructor() {}
+  constructor(
+    @Optional()
+    @Inject(NGX_PASSWORD_STRENGTH_METER_CONFIG)
+    config: NgxPasswordStrengthMeterConfig
+  ) {
+    if (config) {
+      ZxcvbnOptions.setOptions(config.zxcvbnOptions);
+    }
+  }
 
   /**
    * This will calculates the password strength

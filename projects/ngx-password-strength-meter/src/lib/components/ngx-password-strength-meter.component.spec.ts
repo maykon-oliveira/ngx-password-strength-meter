@@ -1,4 +1,4 @@
-import { NgxPasswordStrengthMeterService } from './ngx-password-strength-meter.service';
+import { NgxPasswordStrengthMeterService } from '../ngx-password-strength-meter.service';
 import { SimpleChange } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';

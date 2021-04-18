@@ -8,8 +8,8 @@ import {
   Output,
   SimpleChanges,
 } from '@angular/core';
-import { StrengthFeedback } from './model/strength-feedback';
-import { NgxPasswordStrengthMeterService } from './ngx-password-strength-meter.service';
+import { StrengthFeedback } from '../model/strength-feedback';
+import { NgxPasswordStrengthMeterService } from '../ngx-password-strength-meter.service';
 
 const getLengthRuleErrorMessage = {
   min: (v) => ({
@@ -69,6 +69,8 @@ export class NgxPasswordStrengthMeterComponent implements OnInit, OnChanges {
       }
     } else {
       const { score, feedback } = this.service.calculate(this.password);
+      console.log({ score, feedback });
+
       this.strength = score;
       this.feedback = this.enableFeedback ? feedback : null;
     }
