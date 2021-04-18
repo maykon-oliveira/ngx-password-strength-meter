@@ -1,6 +1,6 @@
 import { NgxPasswordStrengthMeterService } from './ngx-password-strength-meter.service';
 import { SimpleChange } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { NgxPasswordStrengthMeterComponent } from './ngx-password-strength-meter.component';
@@ -10,21 +10,23 @@ describe('NgxPasswordStrengthMeterComponent', () => {
   let fixture: ComponentFixture<NgxPasswordStrengthMeterComponent>;
   let ngxPasswordStrengthMeterServiceSpy;
 
-  beforeEach(async(() => {
-    ngxPasswordStrengthMeterServiceSpy = jasmine.createSpyObj('NgxPasswordStrengthMeterService', [
-      'calculate',
-    ]);
+  beforeEach(
+    waitForAsync(() => {
+      ngxPasswordStrengthMeterServiceSpy = jasmine.createSpyObj('NgxPasswordStrengthMeterService', [
+        'calculate',
+      ]);
 
-    TestBed.configureTestingModule({
-      declarations: [NgxPasswordStrengthMeterComponent],
-      providers: [
-        {
-          provide: NgxPasswordStrengthMeterService,
-          useValue: ngxPasswordStrengthMeterServiceSpy,
-        },
-      ],
-    }).compileComponents();
-  }));
+      TestBed.configureTestingModule({
+        declarations: [NgxPasswordStrengthMeterComponent],
+        providers: [
+          {
+            provide: NgxPasswordStrengthMeterService,
+            useValue: ngxPasswordStrengthMeterServiceSpy,
+          },
+        ],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(NgxPasswordStrengthMeterComponent);
