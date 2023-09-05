@@ -1,11 +1,11 @@
 {
   "name": "ngx-password-strength-meter",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:lib:prod": "npm run build -- --configuration production",
+    "build:lib:prod": "npm run build ngx-password-strength-meter --prod",
     "build:lib:watch": "ng build -- --watch",
     "build:showcase": "ng build ngx-password-strength-meter-showcase",
     "build:showcase:prod": "npm run build:showcase -- --configuration production --output-path docs --base-href ngx-password-strength-meter",
@@ -14,7 +14,7 @@
     "coverage:lib:report": "cat ./coverage/ngx-password-strength-meter/lcov.info | codecov",
     "lint": "ng lint",
     "format:check": "prettier --list-different 'projects/**'",
-    "format:write": "prettier --write 'projects/**'",
+    "format:write": "prettier --write projects/**",
     "publish": "cd dist/ngx-password-strength-meter && npm publish",
     "release": "standard-version",
     "e2e": "ng e2e"
