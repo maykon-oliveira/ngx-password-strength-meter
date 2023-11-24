@@ -10,6 +10,7 @@ import {
 import { StrengthFeedback } from './model/strength-feedback';
 import { Score } from './model/strength-result';
 import { NgxPasswordStrengthMeterService } from './ngx-password-strength-meter.service';
+import { NgIf, NgFor } from '@angular/common';
 
 const getLengthRuleErrorMessage = {
   min: (v) => ({
@@ -27,6 +28,8 @@ const getLengthRuleErrorMessage = {
   templateUrl: './ngx-password-strength-meter.component.html',
   styleUrls: ['./ngx-password-strength-meter.component.scss'],
   styles: [],
+  standalone: true,
+  imports: [NgIf, NgFor],
 })
 export class NgxPasswordStrengthMeterComponent implements OnInit, OnChanges {
   @Input() password: string;

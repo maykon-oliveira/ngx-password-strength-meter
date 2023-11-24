@@ -16,7 +16,7 @@ describe('NgxPasswordStrengthMeterComponent', () => {
     ]);
 
     TestBed.configureTestingModule({
-      declarations: [NgxPasswordStrengthMeterComponent],
+      imports: [NgxPasswordStrengthMeterComponent],
       providers: [
         {
           provide: NgxPasswordStrengthMeterService,
