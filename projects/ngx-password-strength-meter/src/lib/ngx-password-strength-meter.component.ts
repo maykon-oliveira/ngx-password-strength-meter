@@ -31,7 +31,7 @@ const getLengthRuleErrorMessage = {
   standalone: true,
   imports: [NgIf, NgFor],
 })
-export class NgxPasswordStrengthMeterComponent implements OnInit, OnChanges {
+export class NgxPasswordStrengthMeter implements OnInit, OnChanges {
   @Input() password: string;
   @Input() min = 8;
   @Input() max = 30;
