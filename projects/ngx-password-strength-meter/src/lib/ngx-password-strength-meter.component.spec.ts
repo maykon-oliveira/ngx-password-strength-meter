@@ -3,11 +3,11 @@ import { SimpleChange } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
-import { NgxPasswordStrengthMeterComponent } from './ngx-password-strength-meter.component';
+import { NgxPasswordStrengthMeter } from './ngx-password-strength-meter.component';
 
 describe('NgxPasswordStrengthMeterComponent', () => {
-  let component: NgxPasswordStrengthMeterComponent;
-  let fixture: ComponentFixture<NgxPasswordStrengthMeterComponent>;
+  let component: NgxPasswordStrengthMeter;
+  let fixture: ComponentFixture<NgxPasswordStrengthMeter>;
   let ngxPasswordStrengthMeterServiceSpy;
 
   beforeEach(async(() => {
@@ -16,7 +16,7 @@ describe('NgxPasswordStrengthMeterComponent', () => {
     ]);
 
     TestBed.configureTestingModule({
-      declarations: [NgxPasswordStrengthMeterComponent],
+      imports: [NgxPasswordStrengthMeter],
       providers: [
         {
           provide: NgxPasswordStrengthMeterService,
@@ -27,7 +27,7 @@ describe('NgxPasswordStrengthMeterComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgxPasswordStrengthMeterComponent);
+    fixture = TestBed.createComponent(NgxPasswordStrengthMeter);
     component = fixture.componentInstance;
     ngxPasswordStrengthMeterServiceSpy = fixture.debugElement.injector.get(
       NgxPasswordStrengthMeterService

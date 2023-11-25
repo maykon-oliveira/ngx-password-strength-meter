@@ -1,6 +1,6 @@
 {
   "name": "ngx-password-strength-meter",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -36,6 +36,11 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.1",
+    "@angular-eslint/builder": "17.1.0",
+    "@angular-eslint/eslint-plugin": "17.1.0",
+    "@angular-eslint/eslint-plugin-template": "17.1.0",
+    "@angular-eslint/schematics": "17.1.0",
+    "@angular-eslint/template-parser": "17.1.0",
     "@angular/cli": "^17.0.1",
     "@angular/compiler-cli": "^17.0.3",
     "@angular/language-service": "^17.0.3",
@@ -43,8 +48,11 @@
     "@types/jasminewd2": "~2.0.10",
     "@types/node": "^20.5.7",
     "@types/zxcvbn": "^4.4.2",
+    "@typescript-eslint/eslint-plugin": "6.11.0",
+    "@typescript-eslint/parser": "6.11.0",
     "codecov": "^3.8.2",
     "codelyzer": "^6.0.2",
+    "eslint": "^8.53.0",
     "husky": "^4.3.8",
     "jasmine-core": "~5.1.1",
     "jasmine-spec-reporter": "~7.0.0",

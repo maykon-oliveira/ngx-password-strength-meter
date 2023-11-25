@@ -4,4 +4,3 @@
 
 export * from './lib/ngx-password-strength-meter.service';
 export * from './lib/ngx-password-strength-meter.component';
-export * from './lib/ngx-password-strength-meter.module';
